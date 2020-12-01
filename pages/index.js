@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Calculator from './components/calculator';
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
-			<h1>Hello</h1>
+		<div>
+			<Calculator value={20000} />
 		</div>
 	);
 }
