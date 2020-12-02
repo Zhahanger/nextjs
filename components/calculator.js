@@ -233,6 +233,22 @@ const calculate = (num, rate, term) => {
 	return Math.round(result);
 };
 
+const priceFormat = (price) =>
+	new Intl.NumberFormat('ru-RU', {
+		style: 'currency',
+		currency: 'RUB',
+		minimumFractionDigits: 0,
+		maximumFractionDigits: 0,
+	}).format(price);
+// Reverse array
+export const reverseArr = (input) => {
+	var ret = [];
+	for (let i = input.length - 1; i >= 0; i--) {
+		ret.push(input[i]);
+	}
+	return ret;
+};
+
 const BankInfoComponent = (props) => {
 	let [showAllItems, toggleAllItems] = useState(false);
 	return (
@@ -245,8 +261,7 @@ const BankInfoComponent = (props) => {
 							<Text bold>{name}</Text>
 							<Text>{description}</Text>
 							<small>
-								Сумма кредита:&nbsp;
-								{numberFormat(
+								{priceFormat(
 									calculate(props.amount, rate, props.term * 12) *
 										props.term *
 										12
@@ -255,7 +270,7 @@ const BankInfoComponent = (props) => {
 						</BankInfo>
 						<BankInfo className='credit-sum-wrapper'>
 							<Text bold>
-								{numberFormat(calculate(props.amount, rate, props.term * 12))}
+								{priceFormat(calculate(props.amount, rate, props.term * 12))}
 							</Text>
 							<Text>в месяц</Text>
 						</BankInfo>
