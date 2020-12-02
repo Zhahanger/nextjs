@@ -136,7 +136,7 @@ const bankInfo = [
 	{
 		name: 'Русфинанс Банк',
 		description: 'БУ Gold для дорогих авто без КАСКО',
-		rate: 10.9,
+		rate: 10.3,
 	},
 	{
 		name: 'Русфинанс Банк',
