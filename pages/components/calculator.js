@@ -265,8 +265,8 @@ const BankInfoComponent = (props) => {
 				onClick={(e) => {
 					toggleAllItems(!showAllItems);
 				}}>
-				Показать ещё банки
-				{/* <ChevronIcon /> */}
+				{showAllItems ? 'Скрыть' : 'Показать ещё банки'}
+				<ChevronIcon />
 			</Text>
 		</BankOffersContainer>
 	);
