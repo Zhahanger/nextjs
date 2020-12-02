@@ -347,6 +347,13 @@ const Calculator = ({ value }) => {
 									setBlur(false);
 									console.log('HIhi');
 								}}
+								onTouchStart={() => {
+									setBlur(true);
+								}}
+								onTouchEnd={() => {
+									setAmountValueText(amountValueRange);
+									setBlur(false);
+								}}
 							/>
 						</BlockWithRange>
 						<BlockWithRange>
@@ -373,6 +380,13 @@ const Calculator = ({ value }) => {
 								}}
 								onMouseUp={() => {
 									setCreditTerm(termValueRange);
+									setBlur(false);
+								}}
+								onTouchStart={() => {
+									setBlur(true);
+								}}
+								onTouchEnd={() => {
+									setAmountValueText(amountValueRange);
 									setBlur(false);
 								}}
 							/>
