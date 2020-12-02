@@ -261,6 +261,7 @@ const BankInfoComponent = (props) => {
 							<Text bold>{name}</Text>
 							<Text>{description}</Text>
 							<small>
+								Сумма кредита:&nbsp;
 								{priceFormat(
 									calculate(props.amount, rate, props.term * 12) *
 										props.term *
