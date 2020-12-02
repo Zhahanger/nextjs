@@ -289,14 +289,7 @@ const Calculator = ({ value }) => {
 		<CalculatorWrapper>
 			<h2>Выберите самый удобный кредит</h2>
 			<Formik
-				initialValues={
-					{
-						// email: '',
-						// color: 'red',
-						// firstName: '',
-						// lastName: '',
-					}
-				}
+				initialValues={{}}
 				// onSubmit={(values, actions) => {
 				// 	setTimeout(() => {
 				// 		alert(JSON.stringify(values, null, 2));
